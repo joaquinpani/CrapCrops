@@ -1,12 +1,20 @@
 extends CharacterBody2D
-var velocidad = 100;
+var velocidad = 20000;
 
 func _physics_process(delta: float) -> void:
-	if Input.is_action_pressed("s"):
-		$".".position.y = $".".position.y + (delta * velocidad)
+	velocity = Vector2(0,0)
 	if Input.is_action_pressed("w"):
-		$".".position.y = $".".position.y - (delta * velocidad)
+		velocity.y = (delta * -velocidad)
+		$AnimationPlayer.play("moverse",1.0)
+	if Input.is_action_pressed("s"):
+		velocity.y = (delta * velocidad)
+		$AnimationPlayer.play("moverse",1.0)
 	if Input.is_action_pressed("a"):
-		$".".position.x = $".".position.x - (delta * velocidad)
+		velocity.x = (delta * -velocidad)
+		$AnimationPlayer.play("moverse",1.0)
 	if Input.is_action_pressed("d"):
-		$".".position.x = $".".position.x + (delta * velocidad)
+		velocity.x = (delta * velocidad)
+		$AnimationPlayer.play("moverse",1.0)
+	if velocity.x == 0 and velocity.y == 0 :
+		$AnimationPlayer.play("quieto", 0.3)
+	move_and_slide()

@@ -1,16 +1,119 @@
 [gd_scene format=3 uid="uid://dt1wsqr03hcpq"]
 
 [ext_resource type="Script" uid="uid://6ik1nastqjvb" path="res://jugador.gd" id="1_omvyu"]
-[ext_resource type="Texture2D" uid="uid://bv1qspwy26w7g" path="res://73dda643b2105cdc4d2400658b632a9d.jpg" id="2_8o684"]
+[ext_resource type="Texture2D" uid="uid://busuo10sh10nc" path="res://sprites/cropsplayer.png" id="2_8o684"]
+[ext_resource type="Texture2D" uid="uid://cygidn4js5pi5" path="res://sprites/cropsplayerface.png" id="3_ukil5"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_p2d7o"]
-radius = 94.54099
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_uqxed"]
+radius = 67.0
+height = 182.0
+
+[sub_resource type="Animation" id="Animation_8o684"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("cuerpo:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.001),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(10.999999, -30.999998), Vector2(8.999999, -30.999998)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("cuerpo:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.001),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [-0.31911913, 0.0]
+}
+
+[sub_resource type="Animation" id="Animation_ukil5"]
+resource_name = "moverse"
+length = 0.7
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("cuerpo:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.13333334, 0.23333332, 0.56666666, 0.66666675),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(-13.999999, -41), Vector2(-31, -49.000004), Vector2(58, -39.000004), Vector2(71, -34.000004)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("cuerpo:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.13333336, 0.23333332, 0.56666666, 0.66666675),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [-0.2244399, -0.40422678, 0.26843172, 0.49234408]
+}
+
+[sub_resource type="Animation" id="Animation_7st5j"]
+resource_name = "quieto"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("cuerpo:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(1),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(8.999999, -30.999998)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("cuerpo:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(1),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_7st5j"]
+_data = {
+&"RESET": SubResource("Animation_8o684"),
+&"moverse": SubResource("Animation_ukil5"),
+&"quieto": SubResource("Animation_7st5j")
+}
 
 [node name="Node2D" type="CharacterBody2D" unique_id=829674104]
 script = ExtResource("1_omvyu")
 
-[node name="73Dda643b2105Cdc4d2400658b632a9d" type="Sprite2D" parent="." unique_id=1635713024]
+[node name="cuerpo" type="Sprite2D" parent="." unique_id=1635713024]
+position = Vector2(10.999999, -30.999998)
+rotation = -0.31911913
+scale = Vector2(0.1, 0.1)
 texture = ExtResource("2_8o684")
 
+[node name="Cropsplayerface3" type="Sprite2D" parent="cuerpo" unique_id=1591171897]
+position = Vector2(-99.999985, -189.99997)
+scale = Vector2(0.19999997, 0.19999997)
+texture = ExtResource("3_ukil5")
+
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1068795820]
-shape = SubResource("CircleShape2D_p2d7o")
+shape = SubResource("CapsuleShape2D_uqxed")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=2135734757]
+libraries/ = SubResource("AnimationLibrary_7st5j")
