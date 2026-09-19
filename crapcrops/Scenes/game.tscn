@@ -2,12 +2,23 @@
 
 [ext_resource type="PackedScene" uid="uid://dt1wsqr03hcpq" path="res://jugador.tscn" id="1_ebmjs"]
 [ext_resource type="PackedScene" uid="uid://eg1w3javw7ps" path="res://Scenes/game_ui.tscn" id="2_qxrlw"]
+[ext_resource type="PackedScene" uid="uid://biabjbw87le8b" path="res://Scenes/farming_plot.tscn" id="3_wrm1d"]
 
 [node name="world_map" type="Node2D" unique_id=1127061780]
-
-[node name="Node2D" parent="." unique_id=829674104 instance=ExtResource("1_ebmjs")]
-position = Vector2(583, 321)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=577584981]
 
 [node name="game_UI" parent="CanvasLayer" unique_id=450269222 instance=ExtResource("2_qxrlw")]
+
+[node name="farm" type="Node2D" parent="." unique_id=577152098]
+
+[node name="farming_plots" type="Node2D" parent="farm" unique_id=1652561859]
+
+[node name="farming_plot" parent="farm/farming_plots" unique_id=502037821 instance=ExtResource("3_wrm1d")]
+position = Vector2(223, 184)
+
+[node name="farming_plot2" parent="farm/farming_plots" unique_id=1883575289 instance=ExtResource("3_wrm1d")]
+position = Vector2(371, 184)
+
+[node name="Node2D" parent="." unique_id=829674104 instance=ExtResource("1_ebmjs")]
+position = Vector2(583, 321)
