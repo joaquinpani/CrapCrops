@@ -1,11 +1,13 @@
 [gd_scene format=3 uid="uid://biabjbw87le8b"]
 
 [ext_resource type="Texture2D" uid="uid://khinsbq22d4f" path="res://icon.svg" id="1_djmqr"]
+[ext_resource type="Script" uid="uid://c2o0wddwii52o" path="res://Scenes/farming_plot.gd" id="1_io3c2"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_adqv7"]
 size = Vector2(123, 124)
 
 [node name="farming_plot" type="Area2D" unique_id=502037821]
+script = ExtResource("1_io3c2")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1228885061]
 position = Vector2(-0.5, 0)

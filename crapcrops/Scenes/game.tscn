@@ -3,6 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://dt1wsqr03hcpq" path="res://jugador.tscn" id="1_ebmjs"]
 [ext_resource type="PackedScene" uid="uid://eg1w3javw7ps" path="res://Scenes/game_ui.tscn" id="2_qxrlw"]
 [ext_resource type="PackedScene" uid="uid://biabjbw87le8b" path="res://Scenes/farming_plot.tscn" id="3_wrm1d"]
+[ext_resource type="PackedScene" uid="uid://b7dl3ov2in0f6" path="res://Scenes/seed.tscn" id="4_3dryh"]
 
 [node name="world_map" type="Node2D" unique_id=1127061780]
 
@@ -20,5 +21,76 @@ position = Vector2(223, 184)
 [node name="farming_plot2" parent="farm/farming_plots" unique_id=1883575289 instance=ExtResource("3_wrm1d")]
 position = Vector2(371, 184)
 
+[node name="farming_plot3" parent="farm/farming_plots" unique_id=1105007517 instance=ExtResource("3_wrm1d")]
+position = Vector2(69, 184)
+
+[node name="farming_plot4" parent="farm/farming_plots" unique_id=2112361850 instance=ExtResource("3_wrm1d")]
+position = Vector2(223, 30)
+
+[node name="farming_plot5" parent="farm/farming_plots" unique_id=85268285 instance=ExtResource("3_wrm1d")]
+position = Vector2(371, 30)
+
+[node name="farming_plot6" parent="farm/farming_plots" unique_id=389670597 instance=ExtResource("3_wrm1d")]
+position = Vector2(69, 30)
+
+[node name="farming_plot7" parent="farm/farming_plots" unique_id=1800632412 instance=ExtResource("3_wrm1d")]
+position = Vector2(814, 184)
+
+[node name="farming_plot8" parent="farm/farming_plots" unique_id=1861082935 instance=ExtResource("3_wrm1d")]
+position = Vector2(962, 184)
+
+[node name="farming_plot9" parent="farm/farming_plots" unique_id=1201934419 instance=ExtResource("3_wrm1d")]
+position = Vector2(660, 184)
+
+[node name="farming_plot10" parent="farm/farming_plots" unique_id=1097462829 instance=ExtResource("3_wrm1d")]
+position = Vector2(814, 30)
+
+[node name="farming_plot11" parent="farm/farming_plots" unique_id=285141294 instance=ExtResource("3_wrm1d")]
+position = Vector2(962, 30)
+
+[node name="farming_plot12" parent="farm/farming_plots" unique_id=491685580 instance=ExtResource("3_wrm1d")]
+position = Vector2(660, 30)
+
+[node name="farming_plot13" parent="farm/farming_plots" unique_id=987915256 instance=ExtResource("3_wrm1d")]
+position = Vector2(223, 641)
+
+[node name="farming_plot14" parent="farm/farming_plots" unique_id=29645333 instance=ExtResource("3_wrm1d")]
+position = Vector2(371, 641)
+
+[node name="farming_plot15" parent="farm/farming_plots" unique_id=1501469707 instance=ExtResource("3_wrm1d")]
+position = Vector2(69, 641)
+
+[node name="farming_plot16" parent="farm/farming_plots" unique_id=601215059 instance=ExtResource("3_wrm1d")]
+position = Vector2(223, 487)
+
+[node name="farming_plot17" parent="farm/farming_plots" unique_id=1500426448 instance=ExtResource("3_wrm1d")]
+position = Vector2(371, 487)
+
+[node name="farming_plot18" parent="farm/farming_plots" unique_id=1972693575 instance=ExtResource("3_wrm1d")]
+position = Vector2(69, 487)
+
+[node name="farming_plot19" parent="farm/farming_plots" unique_id=307131515 instance=ExtResource("3_wrm1d")]
+position = Vector2(814, 641)
+
+[node name="farming_plot20" parent="farm/farming_plots" unique_id=310007669 instance=ExtResource("3_wrm1d")]
+position = Vector2(962, 641)
+
+[node name="farming_plot21" parent="farm/farming_plots" unique_id=1467159822 instance=ExtResource("3_wrm1d")]
+position = Vector2(660, 641)
+
+[node name="farming_plot22" parent="farm/farming_plots" unique_id=1756794824 instance=ExtResource("3_wrm1d")]
+position = Vector2(814, 487)
+
+[node name="farming_plot23" parent="farm/farming_plots" unique_id=1386599161 instance=ExtResource("3_wrm1d")]
+position = Vector2(962, 487)
+
+[node name="farming_plot24" parent="farm/farming_plots" unique_id=1456194138 instance=ExtResource("3_wrm1d")]
+position = Vector2(660, 487)
+
 [node name="Node2D" parent="." unique_id=829674104 instance=ExtResource("1_ebmjs")]
-position = Vector2(583, 321)
+position = Vector2(523, 309)
+
+[node name="Camera2D" type="Camera2D" parent="Node2D" unique_id=1936386938]
+
+[node name="seed" parent="." unique_id=855798269 instance=ExtResource("4_3dryh")]
+position = Vector2(1439, 353)
