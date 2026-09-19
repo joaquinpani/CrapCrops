@@ -1,7 +1,7 @@
 extends Node
 
 var seed_inventory : Dictionary = {
-	1: 0,
-	2: 0,
-	3: 0
+	0: {"seed_type" : "", "quantity" : 0},
+	1: {"seed_type" : "", "quantity" : 0},
+	2: {"seed_type" : "", "quantity" : 0}
 }
