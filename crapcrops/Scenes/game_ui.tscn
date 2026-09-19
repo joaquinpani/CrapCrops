@@ -43,4 +43,40 @@ show_percentage = false
 [node name="Control" type="Control" parent="Control/HBoxContainer" unique_id=1785576460]
 layout_mode = 2
 size_flags_horizontal = 3
-size_flags_stretch_ratio = 2.47
+size_flags_stretch_ratio = 2.5
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=293490470]
+layout_mode = 1
+anchors_preset = 11
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -108.0
+grow_horizontal = 0
+grow_vertical = 2
+
+[node name="Control" type="Control" parent="VBoxContainer" unique_id=773239645]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="seeds" type="VBoxContainer" parent="VBoxContainer" unique_id=1307278017]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Panel" type="Panel" parent="VBoxContainer/seeds" unique_id=1121402424]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Sprite2D" type="Sprite2D" parent="VBoxContainer/seeds/Panel" unique_id=1698513198]
+
+[node name="Panel2" type="Panel" parent="VBoxContainer/seeds" unique_id=377959279]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Sprite2D" type="Sprite2D" parent="VBoxContainer/seeds/Panel2" unique_id=1965516003]
+
+[node name="Panel3" type="Panel" parent="VBoxContainer/seeds" unique_id=15385323]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Sprite2D" type="Sprite2D" parent="VBoxContainer/seeds/Panel3" unique_id=700180507]
