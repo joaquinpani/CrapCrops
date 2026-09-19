@@ -1,3 +1,13 @@
 [gd_scene format=3 uid="uid://bym2c87csv06n"]
 
-[node name="Node2D" type="Node2D" unique_id=1127061780]
+[ext_resource type="PackedScene" uid="uid://dt1wsqr03hcpq" path="res://jugador.tscn" id="1_ebmjs"]
+[ext_resource type="PackedScene" uid="uid://eg1w3javw7ps" path="res://Scenes/game_ui.tscn" id="2_qxrlw"]
+
+[node name="world_map" type="Node2D" unique_id=1127061780]
+
+[node name="Node2D" parent="." unique_id=829674104 instance=ExtResource("1_ebmjs")]
+position = Vector2(583, 321)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=577584981]
+
+[node name="game_UI" parent="CanvasLayer" unique_id=450269222 instance=ExtResource("2_qxrlw")]

@@ -1,0 +1,46 @@
+[gd_scene format=3 uid="uid://eg1w3javw7ps"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3dryh"]
+bg_color = Color(0.450841, 0.6722808, 0.27539822, 1)
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color(0, 0, 0, 1)
+
+[node name="game_UI" type="Control" unique_id=450269222]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Control" type="Control" parent="." unique_id=2081436493]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 85.0
+grow_horizontal = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Control" unique_id=94854228]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_bottom = -18.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ProgressBar" type="ProgressBar" parent="Control/HBoxContainer" unique_id=1955884795]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+theme_override_styles/fill = SubResource("StyleBoxFlat_3dryh")
+value = 100.0
+show_percentage = false
+
+[node name="Control" type="Control" parent="Control/HBoxContainer" unique_id=1785576460]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 2.47

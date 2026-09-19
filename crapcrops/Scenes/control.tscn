@@ -1,5 +1,7 @@
 [gd_scene format=3 uid="uid://b7q7jb5vaariy"]
 
+[ext_resource type="Script" uid="uid://c8ae1iikcp1we" path="res://Scripts/control.gd" id="1_sjmnu"]
+
 [sub_resource type="Gradient" id="Gradient_2os6u"]
 offsets = PackedFloat32Array(0.02238806, 0.9925373)
 colors = PackedColorArray(0.14780787, 0.3062295, 0.0066320323, 1, 1, 1, 1, 1)
@@ -39,6 +41,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_sjmnu")
 
 [node name="Panel" type="Panel" parent="." unique_id=1516740558]
 layout_mode = 1
@@ -114,3 +117,5 @@ size_flags_horizontal = 3
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
+
+[connection signal="pressed" from="VBoxContainer/VBoxContainer2/HBoxContainer/Button" to="." method="_on_button_pressed"]
